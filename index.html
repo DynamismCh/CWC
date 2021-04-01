@@ -67,7 +67,33 @@
             <figure> <!-- The figure tag marks data (usually an image) that is part of the article -->
 
                 
-                    <img src="IMG-20210327-WA0000.jpg" width="620" height="340" />
+                    
+					<div class>
+
+
+					<img class="mySlides" src="IMG-20210327-WA0000.jpg" style ="width:500px; height:300px;"> 
+					<img class="mySlides" src="images (61).jpeg" style ="width:600px; height:310px;">
+					<img class="mySlides" src="images (62).jpeg" style ="width:600px; height:300px;">
+
+ 
+					</div>
+
+		<script>
+		var myIndex = 0;
+		carousel();
+
+			function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+										}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+										}
+		</script>
 
             </figure>
 
